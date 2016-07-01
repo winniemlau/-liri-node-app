@@ -14,53 +14,74 @@
 	3. movie-this
 	4. do-what-it-says
 
-* Type in node liri.js to get the instructions on how to enter the commands correctly.
-So if you were to type the below command you'd get the last 20 tweets I created (There may not be 20 tweets for me I just created an account)
+So if you succeed, running the following commands in your terminal will do the following things
 
-* Example for twitter
 ```
 node liri.js my-tweets
 ```
+* will show your last 20 tweets and when they were created at in the terminal
 
-* Example for spotify
 ```
 node liri.js spotify-this-song '<song name here>'
 ```
-* shows the following information about the song in the terminal
-	1. artist(s)
-	2. song name
-	3. preview link of the song from spotify
-	4. album that the song is a part of
 
-* Example for movie
+* shows the following information about the song in the terminal
+
+	* artist(s)
+	* song name
+	* preview link of the song from spotify
+	* album that the song is a part of
+	* song name
+
+* if no song is provided then your program will default to
+	* "what's my age again" by blink 182
+
 ```
 node liri.js movie-this '<movie name here>'
 ```
+
 * this would output the following information to the terminal:
-	1. Title
-	2. Year
-	3. IMDB Rating
-	4. Country
-	5. Language
-	6. Plot
-	7. Actors
-	8. Rotten Tomatoes Rating 
-	9. Rotten Tomatoes URL
 
+	* Title
+	* Year
+	* IMDB Rating
+	* Country
+	* Language
+	* Plot
+	* Actors
+	* Rotten Tomatoes Rating 
+	* Rotten Tomatoes URL
 
-* Example for do what it says
+	* if no movie is provided then the program will output information for the movie: 'Mr. Nobody'
+		* if you haven't watched Mr. Nobody then you should: http://www.imdb.com/title/tt0485947/
+		* You can catch it on Netflix
+
 ```
 node liri.js do-what-it-says 
 ```
 
+* Using the fs package in node, the program would take the text inside of random.txt and use it to call the first command with the second part as it's parameter
 
-* These are the npm packages I used and are needed to run the app
-	1. fs package in node
-	2. [twitter](https://www.npmjs.com/package/twitter)
-	3. [spotify](https://www.npmjs.com/package/spotify)
-	4. [request](https://www.npmjs.com/package/request)
-	
+* Currently in random.txt, the following text is there:
+
+```
+spotify-this-song,"I Want it That Way"
+```
+
+* so according to those instructions, you would  call the appropriate function and pass in "I Want it That Way" as the song.
+
+* This should work for any function and parameter you use.
+
+9. To get the data for the above things you'll have to use the following npm packages:
+
+* [twitter](https://www.npmjs.com/package/twitter)
+* [spotify](https://www.npmjs.com/package/spotify)
+* [request](https://www.npmjs.com/package/request)
+	* The request npm package will be used to hit the OMDB API
+		* [OMDB API](http://www.omdbapi.com)
+
 * to install these npm packages run these commands one at a time.
+
 ```
 npm install twitter
 npm install spotify
