@@ -1,5 +1,5 @@
 #Week 10 Assignment
-##LIRI
+##LIRI Node App
 
 ###Objectives
 * Create a Node.js app called LIRI (similar to SIRI on the iPhone)
