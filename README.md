@@ -8,9 +8,9 @@
 
 ###How to Run the App
 
-* LIRI will do any of the below command when you enter them into the command line.
-	1. my-tweets
-	2. spotify-this-song
+* LIRI will take in one of the following arguments in the command line:
+	* my-tweets
+	** spotify-this-song
 	3. movie-this
 	4. do-what-it-says
 
